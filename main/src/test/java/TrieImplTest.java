@@ -1,5 +1,7 @@
 import org.junit.Assert;
 import org.junit.Test;
+import trie.Trie;
+import trie.TrieImpl;
 
 import java.util.ArrayList;
 import java.util.Collections;
