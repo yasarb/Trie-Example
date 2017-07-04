@@ -88,6 +88,9 @@ public class TrieImpl implements Trie {
         int n = prefix.length();
         int i = 0;
 
+        if(!contains(prefix))
+            return new ArrayList<String>();
+
         while (i < n) {
             Node tempNode = currentNode.getChildren()[getIndex(prefix.charAt(i))];
             if (tempNode != null) {
