@@ -14,18 +14,18 @@ public class MainApp {
 
     public static void main(String[] args) {
 
-        String[] words = loadWords();
+        String[] words = readWords();
 
         TrieService service = new TrieServiceImpl();
         Trie trie = new TrieImpl();
         service.setTrie(trie);
         service.buildTrie(words);
 
-        MainFrame mainFrame = new MainFrame("Auto-complete By trie.Trie", service);
+        MainFrame mainFrame = new MainFrame("Auto-complete By Trie", service);
         mainFrame.setVisible(true);
     }
 
-    private static String[] loadWords() {
+    private static String[] readWords() {
 
         InputStream is = MainApp.class.getResourceAsStream("google-10000-english.txt");
         String[] wordsArr = new String[10000];
